@@ -1,7 +1,7 @@
 <div class="product-list-container">
   <h2>Suggestions:</h2>
   <div class="product-list">
-    <ng-container *ngFor="let product of suggestions" [ngSwitch]="product.id">
+    <ng-container *ngFor="let product of products" [ngSwitch]="product.id">
       <app-product-card [product]="product"> </app-product-card>
     </ng-container>
   </div>
