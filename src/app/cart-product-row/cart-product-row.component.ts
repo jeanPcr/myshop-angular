@@ -31,7 +31,7 @@ export class CartProductRowComponent {
   addOneMore() {
     this.productService.addProductToCart(this.product.id);
   }
-  getProductQuantity = (): number => {
+  getProductQuantity(): number {
     let quantity = 1;
     this.currentCart.forEach((id) => {
       if (this.product.id === id) {
@@ -39,6 +39,6 @@ export class CartProductRowComponent {
       }
     });
     return quantity;
-  };
+  }
   quantity = this.getProductQuantity();
 }
