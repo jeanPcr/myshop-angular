@@ -1,0 +1,23 @@
+<div class="product">
+  <div class="product-image">
+    <img src="{{ product.thumbnail }}" alt="" />
+  </div>
+  <div class="product-details">
+    <div class="product-title">{{ product.title }}</div>
+    <p class="product-description">
+      {{ product.description }}
+    </p>
+  </div>
+  <div class="product-price">{{ product.price }}</div>
+  <div class="product-quantity">
+    <div class="product-quantity-remove" (click)="removeProduct()">-</div>
+    <div>{{ quantity }}</div>
+    <div class="product-quantity-add" (click)="addOneMore()">+</div>
+  </div>
+  <div class="product-removal">
+    <button (click)="removeProduct()" class="remove-product">Remove</button>
+  </div>
+  <div class="product-line-price">
+    {{ product.price * quantity }}
+  </div>
+</div>

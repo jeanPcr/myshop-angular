@@ -1,0 +1,26 @@
+<div class="card-container">
+  <div class="card">
+    <img src="{{ product.thumbnail }}" alt="" class="product-image" />
+    <h3 class="product-title">{{ product.title }}</h3>
+    <div class="product-price">${{ product.price }}</div>
+    <div class="product-spec">
+      <span><strong>Spécifications</strong></span>
+      <ul>
+        <li><strong>Color : </strong>{{ product.color }}</li>
+        <li><strong>Weight : </strong>{{ product.weight }}</li>
+        <li><strong>Storage :</strong>{{ product.storage }}</li>
+      </ul>
+    </div>
+    <div class="product-btns">
+      <button
+        [routerLink]="['/product', product.id]"
+        class="product-details-btn"
+      >
+        More details
+      </button>
+      <button class="product-add-btn" (click)="onAddToCart(product.id)">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>
