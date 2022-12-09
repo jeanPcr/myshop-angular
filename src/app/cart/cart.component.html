@@ -12,11 +12,18 @@
     </div>
     <div class="product-list">
       <ng-container
+        [style.display]="shoppingCart.length > 0 ? 'block' : 'none'"
         *ngFor="let product of shoppingCart"
         [ngSwitch]="product.id"
       >
         <app-cart-product-row [product]="product"></app-cart-product-row>
       </ng-container>
+      <h3
+        class="isEmpty"
+        [style.display]="shoppingCart.length === 0 ? 'block' : 'none'"
+      >
+        Shopping cart is empty
+      </h3>
     </div>
 
     <div class="totals">
